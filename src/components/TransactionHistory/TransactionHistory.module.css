@@ -1,0 +1,21 @@
+table,
+th,
+td {
+  border: 1px solid;
+}
+table {
+  width: 800px;
+  border-collapse: collapse;
+  font-weight: normal;
+  font-size: 20px;
+}
+th {
+  font-size: 30px;
+  padding: 10px 50px;
+  color: #fff;
+  font-weight: 500;
+  background-color: #3170f7;
+}
+td {
+  padding: 5px;
+}
