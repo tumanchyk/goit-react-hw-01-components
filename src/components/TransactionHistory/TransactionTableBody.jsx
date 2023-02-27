@@ -6,9 +6,9 @@ export default function TransactionTableBody({list}){
         <tbody>
             { list.map(({id, type, amount, currency})=>(
                  <tr key={id}>
-                 <td>{type}</td>
-                 <td>{amount}</td>
-               <td>{currency}</td>
+                 <td className={css.transactionData}>{type}</td>
+                 <td className={css.transactionData}>{amount}</td>
+               <td className={css.transactionData}>{currency}</td>
                </tr>
             ))}
       </tbody>

@@ -3,19 +3,19 @@ th,
 td {
   border: 1px solid;
 }
-table {
+.transactionHistory {
   width: 800px;
   border-collapse: collapse;
   font-weight: normal;
   font-size: 20px;
 }
-th {
+.transactionTitle {
   font-size: 30px;
   padding: 10px 50px;
   color: #fff;
   font-weight: 500;
   background-color: #3170f7;
 }
-td {
+.transactionData {
   padding: 5px;
 }
