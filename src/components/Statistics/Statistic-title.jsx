@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css'
-
+import { Title } from './Statistics.styled';
 
 export default function StatisticTitle({title}){
-    return ( <h2 className={css.title}>{title}</h2>)
+    return ( <Title>{title}</Title>)
 }
 StatisticTitle.propTypes = {
     title: PropTypes.string.isRequired,

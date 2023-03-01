@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css'
+import {StatList, StatItem, Percentage} from './Statistics.styled'
 
 export default function StatisticList({items}){
 return ( 
-<ul className = {css.statistic}>
+<StatList>
 { items.map(({id, label, percentage }) =>(
-    <li className={css.item} key={id}>
-      <span className={css.label}>{label}</span>
-      <span className={css.percentage}>{percentage}%</span>
-    </li>
+    <StatItem key={id} dataColor={getRandomHexColor}>
+      <span>{label}</span>
+      <Percentage>{percentage}%</Percentage>
+    </StatItem>
   ))
 }
-</ul> )
+</StatList> )
 }
 
 StatisticList.propTypes={
@@ -21,5 +21,7 @@ StatisticList.propTypes={
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     }),),
-
+}
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }

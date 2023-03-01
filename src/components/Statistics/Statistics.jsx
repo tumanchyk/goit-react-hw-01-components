@@ -1,14 +1,14 @@
 import StatisticTitle from "./Statistic-title"
 import StatisticList from "./Statistic-list"
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css'
+import { StatSection } from "./Statistics.styled";
 
 export default function Statistics({title, data}){
 return (
-<section className={css.statistics}>
+<StatSection>
     {title && <StatisticTitle title= {title}/>}
     <StatisticList items= {data}/>
-</section>
+</StatSection>
 )
 }
 Statistics.propTypes = {

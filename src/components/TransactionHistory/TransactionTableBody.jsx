@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import css from './TransactionHistory.module.css'
-
+import { DataField } from './Transaction.styled';
 export default function TransactionTableBody({list}){
     return (
         <tbody>
             { list.map(({id, type, amount, currency})=>(
                  <tr key={id}>
-                 <td className={css.transactionData}>{type}</td>
-                 <td className={css.transactionData}>{amount}</td>
-               <td className={css.transactionData}>{currency}</td>
+                 <DataField>{type}</DataField>
+                 <DataField>{amount}</DataField>
+               <DataField>{currency}</DataField>
                </tr>
             ))}
       </tbody>
