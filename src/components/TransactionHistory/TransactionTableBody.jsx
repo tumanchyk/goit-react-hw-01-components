@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import css from './TransactionHistory.module.css'
 import { DataField } from './Transaction.styled';
 export default function TransactionTableBody({list}){
     return (
